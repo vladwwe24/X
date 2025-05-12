@@ -1,0 +1,17 @@
+@import 'src/styles/variables';
+
+.container {
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: $desktop-xl) {
+    padding: 0 10px;
+    max-width: $desktop-xl;
+  }
+}
