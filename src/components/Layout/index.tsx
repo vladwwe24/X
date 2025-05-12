@@ -2,9 +2,9 @@
 
 import s from "./Layout.module.scss"
 
-import "react-toastify/dist/ReactToastify.css"
+// import "react-toastify/dist/ReactToastify.css"
 
-import {ReactNode} from "react"
+import {ReactNode, useState} from "react"
 
 import {usePathname} from "next/navigation"
 
@@ -17,11 +17,15 @@ import {usePathname} from "next/navigation"
 
 const Layout = ({children}: { children: ReactNode }) => {
     const pathname = usePathname()
+    const [dark, setDark] = useState<boolean>(false)
 
     if (pathname === "/") {
         return (
-            <body>
+            <body className={dark ? "dark" : ""}>
+            <div>
                 {children}
+                <button onClick={() => setDark(!dark)}>+</button>
+            </div>
             </body>
         )
     }

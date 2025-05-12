@@ -1,18 +1,28 @@
-@font-face {
-    font-family: "NeueMachina-Light";
-    src: url("static/fonts/NeueMachina-Light.otf");
-  }
-  
-  @font-face {
-    font-family: "NeueMachina-Regular";
-    src: url("static/fonts/NeueMachina-Regular.otf");
-  }
-  
-  @font-face {
-    font-family: "NeueMachina-Ultrabold";
-    src: url("static/fonts/NeueMachina-Ultrabold.otf");
-  }
-  
+@import 'styles/variables.scss';
+
+.dark {
+  --background-color: black;
+  --main-font: sans-serif;
+  --font-color: white;
+  --paragraph-font: sans-serif;
+  --paragraph-color: #ffffffb3;
+  --main-color: #0266ff;
+}
+
+:root {
+  --background-color: #FFF;
+  --main-font: sans-serif;
+  --font-color: #000;
+  --paragraph-font: sans-serif;
+  --paragraph-color: #666263;
+  --main-color: #FFF;
+}
+
+//@font-face {
+//    font-family: "NeueMachina-Light";
+//    src: url("static/fonts/NeueMachina-Light.otf");
+//  }
+
   ::-webkit-scrollbar {
     height: 5px;
     width: 5px;
@@ -70,7 +80,7 @@
   body {
     margin: 0 auto;
   
-    background: #121212;
+    background: var(--background-color);
   
     font-size: 16px;
     font-weight: 400;

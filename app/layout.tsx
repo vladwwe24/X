@@ -1,3 +1,5 @@
+import "styles/global.scss"
+
 import {ReactNode} from "react"
 import Layout from "components/Layout"
 

@@ -1,5 +1,5 @@
-import { FC, ReactNode, Ref } from "react"
 import s from "./Container.module.scss"
+import { FC, ReactNode, Ref } from "react"
 
 interface ContainerProps {
     className?: string,
