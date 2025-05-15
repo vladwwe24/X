@@ -1,6 +1,6 @@
 "use client"
 
-import s from "./Layout.module.scss"
+// import s from "./Layout.module.scss"
 
 // import "react-toastify/dist/ReactToastify.css"
 
@@ -19,9 +19,11 @@ const Layout = ({children}: { children: ReactNode }) => {
     const pathname = usePathname()
     const [dark, setDark] = useState<boolean>(false)
 
+    // className={dark ? "dark" : ""}
+
     if (pathname === "/") {
         return (
-            <body className={dark ? "dark" : ""}>
+            <body>
             <div>
                 {children}
                 <button onClick={() => setDark(!dark)}>+</button>
@@ -32,7 +34,7 @@ const Layout = ({children}: { children: ReactNode }) => {
 
     return (
         <body>
-            {children}
+        {children}
         </body>
     )
 
