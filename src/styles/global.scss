@@ -1,4 +1,4 @@
-@import 'styles/variables.scss';
+@use 'variables';
 
 .dark {
   --background-color: black;
@@ -7,21 +7,38 @@
   --paragraph-font: sans-serif;
   --paragraph-color: #ffffffb3;
   --main-color: #0266ff;
+
+  --slider-item-shadow: rgba(255, 255, 255. 0.1);
 }
 
 :root {
+  --text-font-size: 14px;
+  --text-line-height: 21px;
+
   --background-color: #FFF;
   --main-font: sans-serif;
   --font-color: #000;
   --paragraph-font: sans-serif;
   --paragraph-color: #666263;
   --main-color: #FFF;
+
+  --slider-item-shadow: rgba(0, 0, 0, 0.1);
 }
 
-//@font-face {
-//    font-family: "NeueMachina-Light";
-//    src: url("static/fonts/NeueMachina-Light.otf");
-//  }
+@font-face {
+    font-family: "MuseoSansCyrl-Light";
+    src: url("/fonts/MuseoSansCyrl_300.woff2") format('woff2');
+  }
+
+@font-face {
+  font-family: "MuseoSansCyrl-Bold";
+  src: url("/fonts/MuseoSansCyrl_700.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "TextVariable-Full";
+  src: url("/fonts/text-variable-full.woff2") format('woff2');
+}
 
   ::-webkit-scrollbar {
     height: 5px;
@@ -39,7 +56,7 @@
   }
   
   html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
   del, dfn, em, img, ins, kbd, q, s, samp,
   small, strike, strong, sub, sup, tt, var,
@@ -55,9 +72,18 @@
     padding: 0;
     border: 0;
     font-size: 100%;
-    font-family: NeueMachina-Regular, serif;
+    font-family: MuseoSansCyrl-Light, serif;
     vertical-align: baseline;
   }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: MuseoSansCyrl-Bold, serif;
+  vertical-align: baseline;
+}
   
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,

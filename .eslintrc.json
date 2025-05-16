@@ -6,6 +6,6 @@
   ],
   "plugins": [],
   "rules": {
-    // Добавьте свои правила, если нужно
+    "@next/next/no-img-element": "off"
   }
 }

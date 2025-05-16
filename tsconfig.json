@@ -6,7 +6,8 @@
       "components/*": ["components/*"],
       "styles/*": ["styles/*"],
       "utils/*": ["utils/*"],
-      "configs/*": ["configs/*"]
+      "configs/*": ["configs/*"],
+      "types/*": ["types/*"],
     },
     "lib": [
       "dom",

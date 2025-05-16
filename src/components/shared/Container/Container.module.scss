@@ -1,4 +1,4 @@
-@import 'src/styles/variables';
+@use 'styles/variables';
 
 .container {
   width: 100%;
@@ -6,12 +6,24 @@
   margin: 0 auto;
   padding: 0 10px;
 
-  @media screen and (min-width: $desktop) {
-    padding: 0 20px;
+  @media screen and (min-width: variables.$tablet) {
+    width: variables.$tablet;
+    padding: 0 120px;
   }
 
-  @media screen and (min-width: $desktop-xl) {
-    padding: 0 10px;
-    max-width: $desktop-xl;
+  @media screen and (min-width: variables.$desktop-sm) {
+    width: variables.$desktop-sm;
+    padding: 0 180px;
+  }
+
+  @media screen and (min-width: variables.$desktop) {
+    width: variables.$desktop;
+    padding: 0 220px;
+  }
+
+  @media screen and (min-width: variables.$desktop-xl) {
+    width: variables.$desktop-xl;
+    padding: 0 500px;
+    max-width: variables.$desktop-xl;
   }
 }
